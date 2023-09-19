@@ -1,12 +1,11 @@
 package com.example.advancedjavaweek2;
 
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.CheckBox;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -29,7 +28,7 @@ public class CreateBookController implements Initializable {
     private ComboBox<String> genreComboBox;
 
     @FXML
-    private TextField priceTextField;
+    private Spinner<Double> priceSpinner;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -39,6 +38,38 @@ public class CreateBookController implements Initializable {
 
         // populate genres into combobox
         genreComboBox.getItems().addAll(Book.findGenres());
+
+        // spinner setup
+        SpinnerValueFactory<Double> spinnerValueFactory = new SpinnerValueFactory.DoubleSpinnerValueFactory(0, 100, 20, 1);
+        priceSpinner.setValueFactory(spinnerValueFactory);
+        priceSpinner.setEditable(true);
+
+        TextField priceTextField = priceSpinner.getEditor();
+
+        // anonymous inner function - to listen to events (changeListener)
+        /*priceTextField.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observableValue, String oldValue, String newValue) {
+                try {
+                    Double.parseDouble(newValue);
+                    finalLabel.setVisible(false);
+                } catch (Exception e){
+                    finalLabel.setVisible(true);
+                    finalLabel.setText("Please enter only number values for price");
+                }
+            }
+        });*/
+
+        // lambda function - to listen to events (changeListener)
+        priceTextField.textProperty().addListener(((observableValue, oldValue, newValue) -> {
+            try {
+                Double.parseDouble(newValue);
+                finalLabel.setVisible(false);
+            } catch (Exception e){
+                finalLabel.setVisible(true);
+                finalLabel.setText("Please enter only number values for price");
+            }
+        }));
     }
 
     @FXML
@@ -50,7 +81,7 @@ public class CreateBookController implements Initializable {
             String bookName = bookNameTextField.getText();
             String author = authorTextField.getText();
             String genre = genreComboBox.getSelectionModel().getSelectedItem();
-            double price = (!priceTextField.getText().isBlank()) ? Double.parseDouble(priceTextField.getText()) : -1;
+            double price = priceSpinner.getValue();
             boolean isAvailable = availabilityCheckBox.isSelected();
 
             // create book object

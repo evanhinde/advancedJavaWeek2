@@ -5,6 +5,7 @@
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
@@ -12,7 +13,6 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
-
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.advancedjavaweek2.CreateBookController">
    <children>
@@ -44,8 +44,8 @@
                   <TextField fx:id="bookNameTextField" GridPane.columnIndex="1" />
                   <TextField fx:id="authorTextField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                   <ComboBox fx:id="genreComboBox" prefWidth="150.0" promptText="Select" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                  <TextField fx:id="priceTextField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                   <CheckBox fx:id="availabilityCheckBox" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <Spinner fx:id="priceSpinner" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                </children>
             </GridPane>
             <Button mnemonicParsing="false" onAction="#saveBook" text="Submit" />
