@@ -56,7 +56,7 @@ public class DBUtility {
         ArrayList<Book> books = new ArrayList<>();
 
         // string to hold sql select statement
-        String sql = "SELECT BOOKS.BOOK_ID, BOOKS.BOOK_NAME, BOOKS.AUTHOR, BOOKS.GENRE, BOOKS.PRICE, BOOKS.IS_AVAILABLE, COUNT(SALES.DATE_SOLD)\n" +
+        String sql = "SELECT BOOKS.BOOK_ID, BOOKS.BOOK_NAME, BOOKS.AUTHOR, BOOKS.GENRE, BOOKS.PRICE, BOOKS.IS_AVAILABLE, COUNT(SALES.DATE_SOLD) AS 'UNITS_SOLD'\n" +
                 "FROM BOOKS\n" +
                 "INNER JOIN SALES\n" +
                 "ON BOOKS.BOOK_ID = SALES.BOOK_ID\n" +
@@ -79,7 +79,7 @@ public class DBUtility {
                 int unitsSold = resultSet.getInt("UNITS_SOLD");
 
                 // create book object for variables
-                Book book = new Book(bookId, bookName, author, genre, price, isAvailable);
+                Book book = new Book(bookId, bookName, author, genre, price, isAvailable, unitsSold);
 
                 books.add(book);
 

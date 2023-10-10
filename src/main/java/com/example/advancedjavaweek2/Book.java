@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Book {
     //variables
-    private int bookId;
+    private int bookId, unitsSold;
     private String bookName, author, genre;
     private double price;
     private boolean isAvailable;
@@ -28,6 +28,19 @@ public class Book {
         setGenre(genre);
         setPrice(price);
         setAvailable(isAvailable);
+    }
+
+    public Book(int bookId, String bookName, String author, String genre, double price, boolean isAvailable, int unitsSold) {
+        this(bookId, bookName, author, genre, price, isAvailable);
+        setUnitsSold(unitsSold);
+    }
+
+    public int getUnitsSold() {
+        return unitsSold;
+    }
+
+    public void setUnitsSold(int unitsSold) {
+        this.unitsSold = unitsSold;
     }
 
     //getters and setters
@@ -108,6 +121,8 @@ public class Book {
     public void setAvailable(boolean available) {
         isAvailable = available;
     }
+
+
 
 //toString
 

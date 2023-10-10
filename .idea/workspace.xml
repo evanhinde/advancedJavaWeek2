@@ -4,16 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7aeaa4ef-586e-4800-be18-f22afb7777ce" name="Changes" comment="database connected">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/advancedjavaweek2/BookTableController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/advancedjavaweek2/FakeBooksData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/advancedjavaweek2/SceneChanger.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/advancedjavaweek2/new-table-view.fxml" afterDir="false" />
+    <list default="true" id="7aeaa4ef-586e-4800-be18-f22afb7777ce" name="Changes" comment="Wk 5 commit, error in initialize method">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/advancedjavaweek2/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/advancedjavaweek2/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/advancedjavaweek2/CreateBookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/advancedjavaweek2/CreateBookController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/advancedjavaweek2/BookTableController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/advancedjavaweek2/BookTableController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/advancedjavaweek2/DBUtility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/advancedjavaweek2/DBUtility.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/advancedjavaweek2/create-book-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/advancedjavaweek2/create-book-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,7 +107,10 @@
       <workItem from="1695164912400" duration="8851000" />
       <workItem from="1696358282103" duration="32000" />
       <workItem from="1696358971826" duration="776000" />
-      <workItem from="1696560729113" duration="7105000" />
+      <workItem from="1696560729113" duration="10049000" />
+      <workItem from="1696574163261" duration="784000" />
+      <workItem from="1696615004861" duration="1483000" />
+      <workItem from="1696963030040" duration="603000" />
     </task>
     <task id="LOCAL-00001" summary="code commited">
       <created>1694573559137</created>
@@ -135,7 +133,14 @@
       <option name="project" value="LOCAL" />
       <updated>1695171788348</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Wk 5 commit, error in initialize method">
+      <created>1696569049263</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1696569049263</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -145,17 +150,7 @@
     <MESSAGE value="code commited" />
     <MESSAGE value="spinner and change listener functions added" />
     <MESSAGE value="database connected" />
-    <option name="LAST_COMMIT_MESSAGE" value="database connected" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/advancedjavaweek2/BookTableController.java</url>
-          <line>52</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Wk 5 commit, error in initialize method" />
+    <option name="LAST_COMMIT_MESSAGE" value="Wk 5 commit, error in initialize method" />
   </component>
 </project>

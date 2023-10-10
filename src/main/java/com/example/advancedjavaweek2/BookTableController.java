@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.io.IOException;
 import java.net.URL;
@@ -37,6 +38,22 @@ public class BookTableController implements Initializable {
     @FXML
     private TableColumn<Book, Integer> unitsSoldColumn;
 
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        ArrayList<Book> books = DBUtility.getBooksFromDB();
+        //System.out.println(books);
+
+        bookIdColumn.setCellValueFactory(new PropertyValueFactory<>("bookId"));
+        bookNameColumn.setCellValueFactory(new PropertyValueFactory<>("bookName"));
+        authorColumn.setCellValueFactory(new PropertyValueFactory<>("author"));
+        genreColumn.setCellValueFactory(new PropertyValueFactory<>("genre"));
+        priceColumn.setCellValueFactory(new PropertyValueFactory<>("price"));
+        availabilityColumn.setCellValueFactory(new PropertyValueFactory<>("available"));
+        unitsSoldColumn.setCellValueFactory(new PropertyValueFactory<>("unitsSold"));
+
+        tableView.getItems().addAll(books);
+    }
+
     @FXML
     void addNewBook_onClick(ActionEvent event) throws IOException {
         SceneChanger.changeScene(event, "create-book-view.fxml", "Create-Book");
@@ -45,12 +62,6 @@ public class BookTableController implements Initializable {
     @FXML
     void viewChart_onClick(ActionEvent event) {
 
-    }
-
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-        ArrayList<Book> books = DBUtility.getBooksFromDB();
-        System.out.println(books);
     }
 }
 
