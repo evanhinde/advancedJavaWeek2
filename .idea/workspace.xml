@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7aeaa4ef-586e-4800-be18-f22afb7777ce" name="Changes" comment="Wk 5 commit, error in initialize method">
+    <list default="true" id="7aeaa4ef-586e-4800-be18-f22afb7777ce" name="Changes" comment="Wk 5 commit">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/advancedjavaweek2/BookChartController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/advancedjavaweek2/book-chart-view.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/advancedjavaweek2/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/advancedjavaweek2/Book.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/advancedjavaweek2/BookTableController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/advancedjavaweek2/BookTableController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/advancedjavaweek2/DBUtility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/advancedjavaweek2/DBUtility.java" afterDir="false" />
     </list>
@@ -110,7 +111,9 @@
       <workItem from="1696560729113" duration="10049000" />
       <workItem from="1696574163261" duration="784000" />
       <workItem from="1696615004861" duration="1483000" />
-      <workItem from="1696963030040" duration="603000" />
+      <workItem from="1696963030040" duration="656000" />
+      <workItem from="1696966484226" duration="47000" />
+      <workItem from="1696978772347" duration="5131000" />
     </task>
     <task id="LOCAL-00001" summary="code commited">
       <created>1694573559137</created>
@@ -140,7 +143,14 @@
       <option name="project" value="LOCAL" />
       <updated>1696569049263</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Wk 5 commit">
+      <created>1696963686930</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1696963686930</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -151,6 +161,7 @@
     <MESSAGE value="spinner and change listener functions added" />
     <MESSAGE value="database connected" />
     <MESSAGE value="Wk 5 commit, error in initialize method" />
-    <option name="LAST_COMMIT_MESSAGE" value="Wk 5 commit, error in initialize method" />
+    <MESSAGE value="Wk 5 commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Wk 5 commit" />
   </component>
 </project>

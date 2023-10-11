@@ -1,7 +1,10 @@
 package com.example.advancedjavaweek2;
 
+import javafx.scene.chart.XYChart;
+
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.Collection;
 
 public class DBUtility {
     // variables for username, password and connection url
@@ -90,5 +93,36 @@ public class DBUtility {
 
 
         return books;
+    }
+    public static XYChart.Series<String, Integer> getChartDataFromDB() {
+        XYChart.Series<String, Integer> chartData = new XYChart.Series<>();
+        ArrayList<Book> books = getBooksFromDB();
+        chartData.setName("2023");
+        //chartData.getData().add(new XYChart.Data<>("FakeBook1", 20));
+        //chartData.getData().add(new XYChart.Data<>("FakeBook2", 30));
+        //chartData.getData().add(new XYChart.Data<>("FakeBook3", 40));
+
+        for (Book book:books) {
+            chartData.getData().add(new XYChart.Data<>(book.getBookName(), book.getUnitsSold()));
+        }
+
+        return chartData;
+    }
+
+    public static XYChart.Series<String, Integer> getAvailableChartDataFromDB() {
+        XYChart.Series<String, Integer> chartData = new XYChart.Series<>();
+        ArrayList<Book> books = getBooksFromDB();
+        chartData.setName("2023");
+        //chartData.getData().add(new XYChart.Data<>("FakeBook1", 20));
+        //chartData.getData().add(new XYChart.Data<>("FakeBook2", 30));
+        //chartData.getData().add(new XYChart.Data<>("FakeBook3", 40));
+
+        for (Book book:books) {
+            if (book.isAvailable()) {
+                chartData.getData().add(new XYChart.Data<>(book.getBookName(), book.getUnitsSold()));
+            }
+        }
+
+        return chartData;
     }
 }
